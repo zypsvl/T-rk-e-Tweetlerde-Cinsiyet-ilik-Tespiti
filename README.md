@@ -1,31 +1,10 @@
 
 **Türkçe Tweetlerde Cinsiyetçilik Tespiti**
-Mahsül Önerisi ve Bitki Hastalıkları Tespiti Projesi
-Proje Özeti
-Bu proje, toprak verileri kullanarak mahsul önerisi yapmayı ve derin öğrenme modelleriyle bitki hastalıklarını tespit etmeyi amaçlamaktadır. Tarımsal verimliliği artırmayı ve sürdürülebilir tarımı desteklemeyi hedefler.
+Bu proje, metin sınıflandırma görevleri için BERT modelini kullanarak bir makine öğrenmesi modeli eğitmeyi amaçlamaktadır. Veri seti, model eğitimi öncesinde temizlenir ve etiketler one-hot encoding yöntemiyle dönüştürülür. Hugging Face kütüphanesi kullanılarak BERT modeli ve tokenizer yüklenir. Amaç, giriş metnine dayalı etiketleri doğru tahmin edebilen bir model oluşturmak ve yüksek doğruluk sağlamaktır.
 
-Kullanılan Teknolojiler
-Python
-TensorFlow / Keras
-Scikit-learn
-Pandas, Numpy
-Matplotlib, Seaborn
-PyTorch (gerektiğinde)
-Transformers (BERT gibi modeller için)
-Veri Setleri
-Toprak Verileri: Azot, fosfor, potasyum ve çevresel faktörler.
-Bitki Hastalıkları: 5 farklı hastalık sınıfı (CBB, CBSD, CGM, CMD, Sağlıklı).
-Modeller
-Mahsul Önerisi: XGBoost, Random Forest, TabNet
-Hastalık Tespiti: ResNet50, VGG16, DenseNet, Swin Transformer
-Kurulum
-Gerekli kütüphaneleri yüklemek için:
-
-bash
-Kodu kopyala
-pip install pandas numpy tensorflow scikit-learn matplotlib seaborn pytorch transformers
-Kullanım
-Veri Yükleme ve Ön İşleme: Veri setlerini yükleyin ve temizleme işlemleri yapın.
-Model Eğitim ve Test: Makine öğrenimi ve derin öğrenme modelleri ile eğitimi gerçekleştirin.
-Sonuç Değerlendirme: Model doğruluğu ve performans metriklerini inceleyin.
-
+Özellikler
+Veri Hazırlığı: Veri, temizlenir ve etiketler one-hot encoding ile dönüştürülür.
+BERT Entegrasyonu: Hugging Face transformers kütüphanesi kullanılarak önceden eğitilmiş BERT modeli ve tokenizer yüklenir.
+CUDA Desteği: Eğitim, CUDA destekli GPU üzerinde hızlandırılmış olarak çalışır.
+Model Eğitimi: BERT modeli, sağlanan veri seti ile ince ayar yapılır.
+Değerlendirme: Modelin doğruluğu ve kaybı gibi performans metrikleri değerlendirilir.
